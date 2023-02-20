@@ -1,15 +1,22 @@
-import keyboard
+
 import jogo
+import pkmns
 
-print('1 - Iniciar')
-print('2 - Sair')
+import combatmenu
 
+######introdução##########
+jogo.intro()
+seu_inicial = pkmns.choose_strt()
+#########################
 
-
+print('o que você deseja fazer?')
+print('1 - procurar por inimigos')
+print('2 - andar pelo mapa (wip)')
 
 while True:
-    if keyboard.read_key() == "1":
-        jogo.intro()
-        break
-    if keyboard.read_key() == "2":
-        break
+ ação = int(input('o que farás?'))
+ if ação == 1:
+  inimigo = pkmns.random_enemy
+  print(f'você encontra um {inimigo} selvagem!!')
+  combatmenu.combate(inimigo, seu_inicial)
+
