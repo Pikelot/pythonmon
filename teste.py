@@ -22,5 +22,7 @@ print('4 - fugir')
 while True:
  act = int(input('O que você deseja fazer? '))
  if act == 1:
-    vida_restante = combatsys.atacar(inimigo, seupkmn)
+    vida_restante = atacar(inimigo, seupkmn)
+    inimigo['vida'] = vida_restante
     print('Vida restante:', vida_restante)
+    print (inimigo)
